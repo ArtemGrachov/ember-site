@@ -2,7 +2,17 @@
   <div class="row">
     {{#each model as |post|}}
       <div class="mb-3 col-12 col-md-6 col-lg-4">
-        <PostItem @post={{post}}></PostItem>
+        <PostItem @post={{post}}>
+          <div>
+            <LinkTo
+              @route="posts.single"
+              @model={{post.id}}
+              class="btn btn-primary"
+            >
+              Read
+            </LinkTo>
+          </div>
+        </PostItem>
       </div>
     {{/each}}
   </div>
