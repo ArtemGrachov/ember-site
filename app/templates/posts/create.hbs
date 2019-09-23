@@ -5,5 +5,11 @@
       Return
     {{/link-to}}
   </div>
-  <PostForm @onSubmit={{action "createPost"}}></PostForm>
+  <PostForm @onSubmit={{action "createPost"}}>
+    <BsButton
+      @defaultText="Create"
+      @type="success"
+      @buttonType="submit"
+    />
+  </PostForm>
 </div>

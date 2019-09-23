@@ -8,5 +8,11 @@
   <PostForm
     @form={{form}}
     @onSubmit={{action "updatePost"}}
-  ></PostForm>
+  >
+    <BsButton
+      @defaultText="Update"
+      @type="success"
+      @buttonType="submit"
+    />
+  </PostForm>
 </div>
