@@ -15,7 +15,7 @@ export default DS.Adapter.extend({
       this.serialize(snapshot)
     );
 
-    await fetch(
+    const result = await fetch(
       this.path(type.modelName),
       {
         method: 'POST',
@@ -24,14 +24,16 @@ export default DS.Adapter.extend({
           'Content-Type': 'application/json'
         }
       }
-    )
+    );
+
+    return result.json();
   },
   async updateRecord(store, type, snapshot) {
     const body = JSON.stringify(
       this.serialize(snapshot, { includeId: false })
     );
 
-    await fetch(
+    const result = await fetch(
       `${this.path(type.modelName)}/${snapshot.id}`,
       {
         method: 'PATCH',
@@ -40,7 +42,9 @@ export default DS.Adapter.extend({
           'Content-Type': 'application/json'
         }
       }
-    )
+    );
+
+    return result.json();
   },
   async deleteRecord(store, type, snapshot) {
     await fetch(

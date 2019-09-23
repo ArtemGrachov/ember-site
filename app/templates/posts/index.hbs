@@ -1,4 +1,13 @@
 <div class="container">
+  <div class="mb-3">
+    <LinkTo
+      @route="posts.create"
+      class="btn btn-success"
+    >
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+      Create article
+    </LinkTo>
+  </div>
   <div class="row">
     {{#each model as |post|}}
       <div class="mb-3 col-12 col-md-6 col-lg-4">
@@ -7,7 +16,7 @@
             <LinkTo
               @route="posts.single"
               @model={{post.id}}
-              class="btn btn-primary"
+              class="btn btn-primary btn-sm"
             >
               Read
             </LinkTo>

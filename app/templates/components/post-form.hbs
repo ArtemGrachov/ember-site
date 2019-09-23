@@ -1,0 +1,54 @@
+<BsForm
+  @formLayout="horizontal"
+  @model={{this.form}}
+  @onSubmit={{action "submit"}}
+  as |form|
+>
+  <form.element
+    @controlType="text"
+    @label="Image"
+    @placeholder="Enter the post image URL"
+    @property="imageUrl"
+    @required={{true}}
+    as |el|
+  >
+    <div class="card mb-2">
+      <div class="card-body text-center">
+        <img
+          onerror={{this.onImgError}}
+          src={{if this.form.imageUrl this.form.imageUrl "/assets/image-placeholder.png"}}
+          alt="No image"
+          class="img-thumbnail form-img-preview"
+        >
+      </div>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for={{el.id}}>
+          <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </label>
+      </div>
+      <el.control/>
+    </div>
+  </form.element>
+  <form.element
+    @controlType="text"
+    @label="Title"
+    @placeholder="Enter the post title"
+    @property="title"
+    @required={{true}}
+  />
+  <form.element
+    @controlType="textarea"
+    @label="Text"
+    @placeholder="Enter the post text"
+    @property="content"
+    @rows="10"
+    @required={{true}}
+  />
+  <BsButton
+    @defaultText="Submit"
+    @type="success"
+    @buttonType="submit"
+  />
+</BsForm>

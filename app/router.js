@@ -9,6 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('posts', function() {
     this.route('single', { path: ':post_id' });
+    this.route('create');
+    this.route('edit');
   });
 });
 

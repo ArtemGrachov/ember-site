@@ -1,0 +1,142 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg"
+    },
+    {
+      "title": "1",
+      "content": "1",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "0InLLbz"
+    },
+    {
+      "title": "2",
+      "content": "2",
+      "imageUrl": "https://image.shutterstock.com/image-photo/large-beautiful-drops-transparent-rain-260nw-668593321.jpg",
+      "id": "iOgoGgy"
+    },
+    {
+      "title": "1",
+      "content": "1",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "_9JCkmr"
+    },
+    {
+      "title": "3",
+      "content": "4",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "MtsXK0s"
+    },
+    {
+      "title": "686",
+      "content": "78t875",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "cpxWpfP"
+    },
+    {
+      "title": "1",
+      "content": "1",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "z7wW7Ot"
+    },
+    {
+      "title": "345",
+      "content": "345",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "oeebwe1"
+    },
+    {
+      "title": "334",
+      "content": "2423",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "BLJN8aH"
+    },
+    {
+      "title": "Test 000",
+      "content": "000",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "id": "Ggc5T-O"
+    }
+  ],
+  "ads": [
+    {
+      "id": "1",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "price": 20
+    },
+    {
+      "id": "2",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "price": 20
+    },
+    {
+      "id": "3",
+      "title": "Lorem ipsum dolor sit amet",
+      "content": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://www.w3schools.com/w3css/img_lights.jpg",
+      "price": 20
+    }
+  ],
+  "comments": []
+}
