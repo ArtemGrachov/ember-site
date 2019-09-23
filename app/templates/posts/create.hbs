@@ -5,7 +5,27 @@
       Return
     {{/link-to}}
   </div>
-  <PostForm @onSubmit={{action "createPost"}}>
+  <PostForm
+    @onSubmit={{action "createPost"}}
+    @disabled={{saving}}
+  >
+    {{#if saving}}
+      <BsAlert
+        class="mb-3"
+        @type="info"
+        @dismissible={{false}}
+      >
+        Saving...
+      </BsAlert>
+    {{/if}}
+    {{#if error}}
+      <BsAlert
+        class="mb-3"
+        @type="danger"
+      >
+        Saving error!
+      </BsAlert>
+    {{/if}}
     <BsButton
       @defaultText="Create"
       @type="success"

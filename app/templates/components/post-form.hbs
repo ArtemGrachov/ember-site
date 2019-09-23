@@ -9,6 +9,7 @@
     @label="Image"
     @placeholder="Enter the post image URL"
     @property="imageUrl"
+    @disabled={{disabled}}
     @required={{true}}
     as |el|
   >
@@ -36,6 +37,7 @@
     @label="Title"
     @placeholder="Enter the post title"
     @property="title"
+    @disabled={{disabled}}
     @required={{true}}
   />
   <form.element
@@ -44,6 +46,7 @@
     @placeholder="Enter the post text"
     @property="content"
     @rows="10"
+    @disabled={{disabled}}
     @required={{true}}
   />
   {{yield}}

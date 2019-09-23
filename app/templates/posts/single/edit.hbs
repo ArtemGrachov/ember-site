@@ -7,8 +7,34 @@
   </div>
   <PostForm
     @form={{form}}
+    @disabled={{model.isSaving}}
     @onSubmit={{action "updatePost"}}
   >
+    {{#if model.isSaving}}
+      <BsAlert
+        class="mb-3"
+        @type="info"
+        @dismissible={{false}}
+      >
+        Saving...
+      </BsAlert>
+    {{/if}}
+    {{#if isSaved}}
+      <BsAlert
+        class="mb-3"
+        @type="success"
+      >
+        Saved!
+      </BsAlert>
+    {{/if}}
+    {{#if model.isError}}
+      <BsAlert
+        class="mb-3"
+        @type="danger"
+      >
+        Saving error!
+      </BsAlert>
+    {{/if}}
     <BsButton
       @defaultText="Update"
       @type="success"
