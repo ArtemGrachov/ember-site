@@ -12,21 +12,18 @@
 >
   Edit
 </LinkTo>
-[{{processing}}]
 <BsButton
   @onClick={{action "openDeleteModal"}}
   @size="sm"
   @type="danger"
 >
-  {{#unless error}}
-    {{#if processing}}
-      Deleting...
-    {{else}}
-      Delete
-    {{/if}}
-  {{else}}
+  {{#if error}}
     Error
-  {{/unless}}
+  {{else if processing}}
+    Deleting...
+  {{else}}
+    Delete
+  {{/if}}
 </BsButton>
 <ModalDeletePostConfirmation
   @confirmDeleting={{action "confirmDeleting"}}

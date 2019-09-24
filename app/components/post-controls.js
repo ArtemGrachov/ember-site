@@ -24,6 +24,7 @@ export default Component.extend({
           throw err;
         }
       } else {
+        // eslint-disable-next-line no-console
         console.warn('No onDelete event');
       }
     }
