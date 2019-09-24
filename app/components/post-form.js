@@ -18,5 +18,12 @@ export default Component.extend({
     // This method is used in for <img> onerror event,
     // so 'this' here refers to the element
     this.src='/assets/image-placeholder.png';
+  },
+  init() {
+    this._super(...arguments);
+
+    if (!this.form) {
+      this.set('form', {});
+    }
   }
 });

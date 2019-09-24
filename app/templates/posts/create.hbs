@@ -6,10 +6,11 @@
     {{/link-to}}
   </div>
   <PostForm
+    @form={{model.form}}
     @onSubmit={{action "createPost"}}
     @disabled={{saving}}
   >
-    {{#if saving}}
+    {{#if model.saving}}
       <BsAlert
         class="mb-3"
         @type="info"
@@ -18,7 +19,7 @@
         Saving...
       </BsAlert>
     {{/if}}
-    {{#if error}}
+    {{#if model.error}}
       <BsAlert
         class="mb-3"
         @type="danger"
