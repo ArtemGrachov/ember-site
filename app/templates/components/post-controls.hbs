@@ -1,0 +1,34 @@
+<LinkTo
+  @route="posts.single"
+  @model={{post.id}}
+  class="btn btn-primary btn-sm"
+>
+  Read
+</LinkTo>
+<LinkTo
+  @route="posts.single.edit"
+  @model={{post.id}}
+  class="btn btn-info btn-sm"
+>
+  Edit
+</LinkTo>
+[{{processing}}]
+<BsButton
+  @onClick={{action "openDeleteModal"}}
+  @size="sm"
+  @type="danger"
+>
+  {{#unless error}}
+    {{#if processing}}
+      Deleting...
+    {{else}}
+      Delete
+    {{/if}}
+  {{else}}
+    Error
+  {{/unless}}
+</BsButton>
+<ModalDeletePostConfirmation
+  @confirmDeleting={{action "confirmDeleting"}}
+  @showDeleteModal={{showDeleteModal}}
+></ModalDeletePostConfirmation>

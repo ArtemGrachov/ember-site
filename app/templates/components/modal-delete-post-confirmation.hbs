@@ -1,0 +1,23 @@
+<BsModal
+  @onSubmit={{confirmDeleting}}
+  @open={{showDeleteModal}}
+  as |Modal|
+>
+  <Modal.body>
+    Are you sure you want to delete this post?
+  </Modal.body>
+  <Modal.footer>
+    <BsButton
+      @onClick={{action Modal.close}}
+      @type="default"
+    >
+      Cancel
+    </BsButton>
+    <BsButton
+      @onClick={{action Modal.submit}}
+      @type="danger"
+    >
+      Delete
+    </BsButton>
+  </Modal.footer>
+</BsModal>
