@@ -27,9 +27,9 @@ export default Component.extend({
         // eslint-disable-next-line no-console
         console.warn('No onDelete event');
       }
+    },
+    closeModal() {
+      this.set('showDeleteModal', false);
     }
-  },
-  closeModal() {
-    this.set('showDeleteModal', false);
   }
 });

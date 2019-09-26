@@ -1,5 +1,6 @@
 <BsModal
-  @onSubmit={{confirmDeleting}}
+  @onSubmit={{action "confirmDeleting"}}
+  @onHidden={{action "onHidden"}}
   @open={{showDeleteModal}}
   as |Modal|
 >
