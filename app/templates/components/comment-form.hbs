@@ -1,0 +1,23 @@
+<BsForm
+  as |form|
+>
+  <form.element
+    @controlType="text"
+    @label="Name"
+    @property="name"
+    @placeholder="Enter your name"
+    @disabled={{disabled}}
+    @required={{true}}
+  />
+  <form.element
+    @controlType="textarea"
+    @label="Text"
+    @placeholder="Enter the comment text"
+    @property="content"
+    @name="content"
+    @rows="10"
+    @disabled={{disabled}}
+    @required={{true}}
+  />
+  {{yield}}
+</BsForm>

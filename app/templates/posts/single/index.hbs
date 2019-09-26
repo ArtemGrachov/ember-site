@@ -8,24 +8,47 @@
   <div class="row">
     <div class="col-12 col-lg-8 mb-5">
       <div class="card">
-        <img src={{model.imageUrl}} alt={{model.title}} class="card-img-top">
+        <img src={{model.post.imageUrl}} alt={{model.post.title}} class="card-img-top">
         <div class="card-body">
           <h1 class="card-title h2">
-            {{model.title}}
+            {{model.post.title}}
           </h1>
           <p class="card-text">
-            {{model.content}}
+            {{model.post.content}}
           </p>
         </div>
       </div>
     </div>
     <div class="col-12 col-lg-4">
-      <div class="card">
+      <div class="card mb-3">
         <div class="card-body">
           <h2 class="card-title">
             Comments
           </h2>
-          <div class="text-muted">There are no comments at the moment</div>
+        </div>
+        {{#if model.comments.length}}
+          <ul class="list-group list-group-flush">
+            {{#each model.comments as |comment|}}
+              <li class="list-group-item">
+                <CommentItem @comment={{comment}}></CommentItem>
+              </li>
+            {{/each}}
+          </ul>
+        {{else}}
+          <div class="card-body">
+            <div class="text-muted">There are no comments at the moment</div>
+          </div>
+        {{/if}}
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <CommentForm>
+            <BsButton
+              @type="success"
+              @size="sm"
+              @defaultText="Send"
+            ></BsButton>
+          </CommentForm>
         </div>
       </div>
     </div>
