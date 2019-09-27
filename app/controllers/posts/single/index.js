@@ -13,9 +13,10 @@ export default Controller.extend({
       const post = this.model.post;
       const comment = this.store.createRecord('comment', form);
 
+      const result = await comment.save();
       post.comments.pushObject(comment);
 
-      return await comment.save();
+      return result;
     }
   }
 });

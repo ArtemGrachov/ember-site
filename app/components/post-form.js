@@ -1,29 +1,9 @@
-import Component from '@ember/component';
+import FormComponent from './form';
 
-export default Component.extend({
-  onSubmit: null,
-  disabled: false,
-  form: null,
-  actions: {
-    submit(form) {
-      if (this.onSubmit) {
-        this.onSubmit(form);
-      } else {
-        // eslint-disable-next-line no-console
-        console.warn('No onSubmit event', form);
-      }
-    }
-  },
+export default FormComponent.extend({
   onImgError() {
     // This method is used in for <img> onerror event,
     // so 'this' here refers to the element
     this.src='/assets/image-placeholder.png';
-  },
-  init() {
-    this._super(...arguments);
-
-    if (!this.form) {
-      this.set('form', {});
-    }
   }
 });

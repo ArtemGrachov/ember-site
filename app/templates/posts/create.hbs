@@ -5,11 +5,7 @@
       Return
     {{/link-to}}
   </div>
-  <PostForm
-    @form={{model.form}}
-    @onSubmit={{action "createPost"}}
-    @disabled={{saving}}
-  >
+  <PostForm @onSubmit={{action "createPost"}}>
     {{#if model.saving}}
       <BsAlert
         class="mb-3"
