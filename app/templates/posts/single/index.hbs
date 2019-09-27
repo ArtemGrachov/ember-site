@@ -26,9 +26,9 @@
             Comments
           </h2>
         </div>
-        {{#if model.comments.length}}
+        {{#if model.post.comments.length}}
           <ul class="list-group list-group-flush">
-            {{#each model.comments as |comment|}}
+            {{#each model.post.comments as |comment|}}
               <li class="list-group-item">
                 <CommentItem @comment={{comment}}></CommentItem>
               </li>
@@ -42,9 +42,13 @@
       </div>
       <div class="card">
         <div class="card-body">
-          <CommentForm>
+          <CommentForm
+            @form={{commentForm}}
+            @onSubmit={{action "sendComment"}}
+          >
             <BsButton
               @type="success"
+              @buttonType="submit"
               @size="sm"
               @defaultText="Send"
             ></BsButton>

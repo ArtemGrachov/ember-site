@@ -5,9 +5,9 @@ export default Component.extend({
   disabled: false,
   form: null,
   actions: {
-    submit(form) {
+    async submit(form) {
       if (this.onSubmit) {
-        this.onSubmit(form);
+        const result = await this.onSubmit(form);
       } else {
         // eslint-disable-next-line no-console
         console.warn('No onSubmit event', form);

@@ -1,4 +1,6 @@
 <BsForm
+  @model={{this.form}}
+  @onSubmit={{action "submit"}}
   as |form|
 >
   <form.element
